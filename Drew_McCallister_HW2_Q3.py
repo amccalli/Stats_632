@@ -10,6 +10,7 @@ import numpy as np
 import scipy as sc
 import matplotlib.pyplot as plt
 
+#define distributions
 def Poisson (n,N,P):
     return(P*N)**n/(sc.misc.factorial(n))*np.exp(-P*N)
     
@@ -23,21 +24,25 @@ x=np.arange(0,20,0.25)
 N=4
 P=0.35
 y1=Poisson(x,N,P)
+#Gaussian with same mean and variance as the poisson
 y1g=Gaussian(x,(N*P),(N*P*(1-P)))
 
 N=40
 P=0.35
 y2=Poisson(x,N,P)
+#Gaussian with same mean and variance as the poisson
 y2g=Gaussian(x,(N*P),(N*P*(1-P)))
 
 N=4
 P=0.35
 y3=Binomial(x,4,0.35)
+#Gaussian with same mean and variance as the binomial
 y3g=Gaussian(x,(N*P),(N*P))
 
 N=40
 P=0.35
 y4=Binomial(x,40,0.35)
+#Gaussian with same mean and variance as the binomial
 y4g=Gaussian(x,(N*P),(N*P))
 
 plt.figure(1)
