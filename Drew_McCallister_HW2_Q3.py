@@ -41,14 +41,19 @@ y4=Binomial(x,40,0.35)
 y4g=Gaussian(x,(N*P),(N*P))
 
 plt.figure(1)
-plt.subplot(211)
+plt.title('Poisson N=4 P=0.35')
 plt.plot(x,y1,x,y1g)
-plt.subplot(212)
-plt.plot(x,y2,x,y2g)
+
 plt.figure(2)
-plt.subplot(211)
+plt.title('Poisson N=40 P=0.35')
+plt.plot(x,y2,x,y2g)
+
+plt.figure(3)
+plt.title('Binomial N=4 P=0.35')
 plt.plot(x,y3,x,y3g)
-plt.subplot(212)
+
+plt.figure(4)
+plt.title('Binomial N=40 P=0.35')
 plt.plot(x,y4,x,y4g)
 
 
